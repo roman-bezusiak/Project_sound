@@ -1,3 +1,4 @@
+#include "comm.h"
 #include "sound.h"
 #include "screen.h"
 #include <stdio.h>
@@ -92,5 +93,10 @@ void dispWAVData ( char filename[] )
 		dispBar( i, dB );
 #endif
 	}
+	
 	printf( "\n" );
+	
+#ifdef COMM
+	sendToServer( rms );
+#endif
 }
