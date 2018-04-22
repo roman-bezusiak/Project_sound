@@ -2,101 +2,99 @@
 
 ## Configuration instructions
 
-### 	Required hardware
+### Required hardware
 	
 1. Raspberry Pi Model 3 B
 2. External USB sound card
 3. Microphone
 4. Ethernet cable ( RJ45 )
 5. Server
-			
+
+### Required software
+
+1.
+2.
+3.
+4.
+
 ## Installation instructions
 
-	
+
 
 ## Operating instructions
 
-	
 
-### Algorithm of the program:
+
+### Algorithm of the program
 
 #### Mandatory part
 
 1. Recording sound for 1 second
 2. Outputting corresponding data in the console window:
-
-	- Header data and list of 80 RMS values ( DEBUG mode )
-	- Sound decibel level bar chart ( non-DEBUG mode )
+	1. Header data and list of 80 RMS values ( DEBUG mode )
+	2. Sound decibel level bar chart ( non-DEBUG mode )
 				
 #### Optional part
 
 1. Sending FastDB data to the server
 2. Storing the data on the server side:		
-
-	- All the data with attached dates in .txt file
-	- Last received 8 pieces of data in .json file
-		
+	1. All the data with attached dates in .txt file
+	2. Last received 8 pieces of data in .json file		
 3. Outputting the last obtained data on the webpage real-time chart
 	
 ## File manifest
 
-1. .c files:
-
-	- comm.c
-	- main.c
-	- screen.c
-	- sound.c	
-
-2. .h files:
-
-	- comm.h
-	- screen.h
-	- sound.h
-
-3. Other files:
-
-	- makefile
-	- README.md
+1. **_.c_ files**:
+	1. comm.c
+	2. main.c
+	3. screen.c
+	4. sound.c	
+2. **_.h_ files**:
+	1. comm.h
+	2. screen.h
+	3. sound.h
+3. **_Other_ files**:
+	1. makefile
+	2. README.md
 
 ## Copyright and licensing information
 
-
+This project is licensed under the GNU General Public License - see the LICENSE file for details
 
 ## Known bugs and troubleshooting
 
-### "The graph is not updating"
+### "_The graph is not updating_"
 	
 #### Problem
 	
-After some time the program may stop getting the data from the server, because there is only
-one same request all the time, and returned data from the server is not new, so your browser
-just saves it in cache and does not receive any new data.
+After some time **the program stops getting new data from the server**.
 		
 #### Solution
 	
 1. Clear the browser cache
 2. Refresh the page until it updates
 		
-### "There are some weird symbols changing in the console window"
+### "_There are some weird symbols changing in the console window_"
 	
 #### Problem
 	
-The symbols used as bars are some weird ones and completely do not seem to have a bar form.
+The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the UTF-8 symbol "\u2590"** used as a bar in "screen.c" file.
 		
 #### Solution
 	
-The console does not recognize the UTF-8 symbol "\u2590" used as a bar in "screen.c" file, 
-it can be fixed by setting your console character set to "UTF-8".
+Set your console character set to "UTF-8".
 		
-##### PuTTY
+##### **_PuTTY_** solution
 
-1. Go to your console settings:
-
+1. Go to your console settings ( choose either way )
 	- "PuTTY - Configuration" window can be reached when PuTTY is launched
 	- "PuTTY - Reconfiguration" window can be reached by right-clicking on the top bar
 		of the PuTTY window
-
 2. "Window"               ( window's left side tree )
 3. "Translation"          ( window's left side tree )
 4. "Remote character set" ( window's right side )
 5. Choose "UTF-8"         ( list )
+
+## Credits and acknowledgments
+
+* **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak](https://github.com/roman-bezusiak) 
