@@ -70,10 +70,10 @@
 		- README.md
 
 - Server ( **_5_** ):
-	-**_Front-end_ files** ( **_2_** ):
+	- **_Front-end_ files** ( **_2_** ):
 		- sound.html
 		- soundGraph.js
-	-**_Back-end_ files** ( **_3_** ):
+	- **_Back-end_ files** ( **_3_** ):
 		- last_line.json
 		- sound.php
 		- sound_log.php
@@ -121,4 +121,4 @@ Set your console character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-
 
 ## Credits and acknowledgments
 
-* **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak](https://github.com/roman-bezusiak) 
+- **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak](https://github.com/roman-bezusiak) 
