@@ -83,21 +83,21 @@ After some time the program **stops getting new data** from the server.
 #### Solution
 	
 1. Clear browser cache
-2. Refresh the page until it updates
+2. Refresh the page until the chart updates
 		
 ### "_There are some weird symbols changing in the console window_"
 	
 #### Problem
 	
-The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the UTF-8 symbol \u2590** used as a bar in **_screen.c_** file.
+The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the [UTF-8](https://en.wikipedia.org/wiki/UTF-8) symbol [U+2590](https://en.wikipedia.org/wiki/Block_Elements)** used as a bar in **_screen.c_** file.
 		
 #### Solution
 	
-Set your console character set to **UTF-8**.
+Set your console character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8).
 		
 ##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution
 
-1. Go to your **_console settings_** ( choose either way )
+1. Go to the **_console settings_** ( choose either way )
 	- **_PuTTY - Configuration_** window can be reached when [PuTTY](https://en.wikipedia.org/wiki/PuTTY) 
 	is launched
 	- **_PuTTY - Reconfiguration_** window can be reached by right-clicking on the top bar
