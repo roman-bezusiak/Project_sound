@@ -24,13 +24,15 @@
 
 1. Recording sound for 1 second
 2. Outputting corresponding data in the console window:
+
 	- Header data and list of 80 RMS values ( DEBUG mode )
 	- Sound decibel level bar chart ( non-DEBUG mode )
 				
 ### Optional part
 
 1. Sending FastDB data to the server
-2. Storing the data on the server side:			
+2. Storing the data on the server side:		
+
 	- All the data with attached dates in .txt file
 	- Last received 8 pieces of data in .json file
 		
@@ -39,15 +41,20 @@
 ## File manifest
 
 1. .c:
+
 	- comm.c
 	- main.c
 	- screen.c
 	- sound.c	
+
 2. .h:
+
 	- comm.h
 	- screen.h
 	- sound.h
+
 3. Other:
+
 	- makefile
 	- README.md
 
@@ -83,10 +90,12 @@ it can be fixed by setting your console character set to "UTF-8".
 		
 ##### PuTTY
 
-1. Go to your console settings:		
+1. Go to your console settings:
+
 	- "PuTTY - Configuration" window can be reached when PuTTY is launched
 	- "PuTTY - Reconfiguration" window can be reached by right-clicking on the top bar
 		of the PuTTY window
+		
 2. "Window"               ( window's left side tree )
 3. "Translation"          ( window's left side tree )
 4. "Remote character set" ( window's right side )
