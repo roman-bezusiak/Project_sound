@@ -55,18 +55,30 @@
 	
 ## File manifest
 
-1. **_.c_ files**:
-	1. comm.c
-	2. main.c
-	3. screen.c
-	4. sound.c	
-2. **_.h_ files**:
-	1. comm.h
-	2. screen.h
-	3. sound.h
-3. **_Other_ files**:
-	1. makefile
-	2. README.md
+I. RPi ( **_9_** )
+	- **_.c_ files** ( **_4_** ):
+		- comm.c
+		- main.c
+		- screen.c
+		- sound.c	
+	- **_.h_ files** ( **_3_** ):
+		- comm.h
+		- screen.h
+		- sound.h
+	- **_Other_ files** ( **_2_** ):
+		- makefile
+		- README.md
+
+II. Server ( **_5_** )
+	-**_Front-end_ files** ( **_2_** )
+		- sound.html
+		- soundGraph.js
+	-**_Back-end_ files** ( **_3_** )
+		- last_line.json
+		- sound.php
+		- sound_log.php
+
+Total: **_14_ files**
 
 ## Copyright and licensing information
 
