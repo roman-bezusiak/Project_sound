@@ -15,8 +15,8 @@
 
 ### Required hardware settings
 
-1. Connect your [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
-	Internet using the [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi)
+1. Connect [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
+	Internet using [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi)
 2.
 
 ## Installation instructions
@@ -95,16 +95,17 @@ The symbols used as bars are some weird ones and completely do not seem to have 
 	
 Set your console character set to **UTF-8**.
 		
-##### _PuTTY_ solution
+##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution
 
 1. Go to your **_console settings_** ( choose either way )
-	- **_PuTTY - Configuration_** window can be reached when PuTTY is launched
+	- **_PuTTY - Configuration_** window can be reached when [PuTTY](https://en.wikipedia.org/wiki/PuTTY) 
+	is launched
 	- **_PuTTY - Reconfiguration_** window can be reached by right-clicking on the top bar
-		of the PuTTY window
+		of the [PuTTY](https://en.wikipedia.org/wiki/PuTTY) window
 2. **_Window_**               ( window's left side tree )
 3. **_Translation_**          ( window's left side tree )
 4. **_Remote character set_** ( window's right side )
-5. Choose **_UTF-8_**         ( list )
+5. Choose **_UTF-8_**         ( drop-down list )
 
 ## Credits and acknowledgments
 
