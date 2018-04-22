@@ -38,14 +38,14 @@
 
 ### Algorithm of the program
 
-#### Mandatory part
+#### I. Mandatory part:
 
 1. Recording sound for 1 second
 2. Outputting corresponding data in the console window ( one of the following )
 	- Header data and list of 80 RMS values ( DEBUG mode )
 	- Sound decibel level bar chart ( non-DEBUG mode )
 				
-#### Optional part
+#### II. Optional part:
 
 1. Sending FastDB data to the server
 2. Storing the data on the server side:		
@@ -55,7 +55,7 @@
 	
 ## File manifest
 
-I. RPi ( **_9_** )
+- RPi ( **_9_** ):
 	- **_.c_ files** ( **_4_** ):
 		- comm.c
 		- main.c
@@ -69,11 +69,11 @@ I. RPi ( **_9_** )
 		- makefile
 		- README.md
 
-II. Server ( **_5_** )
-	-**_Front-end_ files** ( **_2_** )
+- Server ( **_5_** ):
+	-**_Front-end_ files** ( **_2_** ):
 		- sound.html
 		- soundGraph.js
-	-**_Back-end_ files** ( **_3_** )
+	-**_Back-end_ files** ( **_3_** ):
 		- last_line.json
 		- sound.php
 		- sound_log.php
