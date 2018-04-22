@@ -2,6 +2,15 @@
 
 ## Configuration instructions
 
+### Required software settings
+
+1. 
+2.
+3.
+4.
+
+## Installation instructions
+
 ### Required hardware
 	
 1. Raspberry Pi Model 3 B
@@ -11,15 +20,12 @@
 5. Server
 
 ### Required software
-
-1.
-2.
-3.
-4.
-
-## Installation instructions
-
-
+	
+1. Raspberry Pi Model 3 B
+2. External USB sound card
+3. Microphone
+4. RPi files
+5. Server files
 
 ## Operating instructions
 
@@ -67,7 +73,7 @@ This project is licensed under the GNU General Public License - see the LICENSE 
 	
 #### Problem
 	
-After some time **the program stops getting new data from the server**.
+After some time the program **stops getting new data** from the server.
 		
 #### Solution
 	
@@ -78,22 +84,22 @@ After some time **the program stops getting new data from the server**.
 	
 #### Problem
 	
-The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the UTF-8 symbol "\u2590"** used as a bar in "screen.c" file.
+The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the UTF-8 symbol _\u2590_** used as a bar in **_screen.c_** file.
 		
 #### Solution
 	
-Set your console character set to "UTF-8".
+Set your console character set to **_UTF-8_**.
 		
-##### **_PuTTY_** solution
+##### _PuTTY_ solution
 
-1. Go to your console settings ( choose either way )
-	- "PuTTY - Configuration" window can be reached when PuTTY is launched
-	- "PuTTY - Reconfiguration" window can be reached by right-clicking on the top bar
+1. Go to your **_console settings_** ( choose either way )
+	- **_PuTTY - Configuration_** window can be reached when PuTTY is launched
+	- **_PuTTY - Reconfiguration_** window can be reached by right-clicking on the top bar
 		of the PuTTY window
-2. "Window"               ( window's left side tree )
-3. "Translation"          ( window's left side tree )
-4. "Remote character set" ( window's right side )
-5. Choose "UTF-8"         ( list )
+2. **_Window_**               ( window's left side tree )
+3. **_Translation_**          ( window's left side tree )
+4. **_Remote character set_** ( window's right side )
+5. Choose **_UTF-8_**         ( list )
 
 ## Credits and acknowledgments
 
