@@ -40,10 +40,12 @@
 
 #### I. Mandatory part:
 
-1. Recording sound for 1 second
-2. Outputting corresponding data in the console window ( one of the following )
-	- Header data and list of 80 RMS values ( DEBUG mode )
-	- Sound decibel level bar chart ( non-DEBUG mode )
+1. Recording **1 second** of audio into _test.wav_ file
+2. Outputting corresponding data in the console window ( one of the following ):
+	- Header data and list of **80 [RMS](https://en.wikipedia.org/wiki/Root_mean_square)** values ( DEBUG mode )
+	- Sound decibel level bar chart ( non-DEBUG mode, one of the following ):
+		- Displayed using bar symbol ( UNICODE mode )
+		- Displayed using asterisk symbol ( non-UNICODE mode )
 				
 #### II. Optional part:
 
@@ -82,7 +84,7 @@ Total: **_14_ files**
 
 ## Copyright and licensing information
 
-This project is licensed under the GNU General Public License - see the LICENSE file for details
+This project is licensed under the [GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License). See the [LICENSE](LICENCE) file for details
 
 ## Known bugs and troubleshooting
 
@@ -105,7 +107,7 @@ The symbols used as bars are some weird ones and completely do not seem to have 
 		
 #### Solution
 	
-Set your console character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8).
+Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8).
 		
 ##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution
 
@@ -121,4 +123,8 @@ Set your console character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-
 
 ## Credits and acknowledgments
 
-- **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak](https://github.com/roman-bezusiak) 
+### Authors:
+- **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak](https://github.com/roman-bezusiak)
+
+### Used resources:
+- **[Wikimedia Foundation Inc.](https://wikimediafoundation.org/wiki/Home), Wikipedia** - _References_ - [wikipedia.org](https://www.wikipedia.org/)
