@@ -2,44 +2,48 @@
 
 ## Configuration instructions
 
-### Required hardware settings
-
-1. 
-2.
-
-### Required software settings ( + additional libraries )
-	
-1. 
-2. 
-
-## Installation instructions
-
 ### Required hardware
 	
 1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
 	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
-2. External USB sound card
+2. [External USB sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) 
+	( further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) )
 3. Microphone
-4. Ethernet cable ( RJ45 )
+4. ["RJ45" Ethernet cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) 
+	( further: [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi) )
 5. Server
+
+### Required hardware settings
+
+1. Connect your [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
+	Internet using the [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi)
+2.
+
+## Installation instructions
 
 ### Required software
 	
 1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
 2. Server files
 
+### Required software settings ( + additional libraries )
+	
+1. 
+2. 
+
 ## Operating instructions
 
-
+1.
+2.
 
 ### Algorithm of the program
 
 #### Mandatory part
 
 1. Recording sound for 1 second
-2. Outputting corresponding data in the console window:
-	1. Header data and list of 80 RMS values ( DEBUG mode )
-	2. Sound decibel level bar chart ( non-DEBUG mode )
+2. Outputting corresponding data in the console window ( one of the following )
+	- Header data and list of 80 RMS values ( DEBUG mode )
+	- Sound decibel level bar chart ( non-DEBUG mode )
 				
 #### Optional part
 
@@ -78,7 +82,7 @@ After some time the program **stops getting new data** from the server.
 		
 #### Solution
 	
-1. Clear the browser cache
+1. Clear browser cache
 2. Refresh the page until it updates
 		
 ### "_There are some weird symbols changing in the console window_"
