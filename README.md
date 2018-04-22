@@ -5,7 +5,7 @@
 ### 	Required hardware
 	
 1. Raspberry Pi Model 3 B
-2. Sound card
+2. External USB sound card
 3. Microphone
 4. Ethernet cable ( RJ45 )
 5. Server
@@ -18,9 +18,9 @@
 
 	
 
-## Algorithm of the program:
+### Algorithm of the program:
 
-### Mandatory part
+#### Mandatory part
 
 1. Recording sound for 1 second
 2. Outputting corresponding data in the console window:
@@ -28,7 +28,7 @@
 	- Header data and list of 80 RMS values ( DEBUG mode )
 	- Sound decibel level bar chart ( non-DEBUG mode )
 				
-### Optional part
+#### Optional part
 
 1. Sending FastDB data to the server
 2. Storing the data on the server side:		
@@ -40,20 +40,20 @@
 	
 ## File manifest
 
-1. .c:
+1. .c files:
 
 	- comm.c
 	- main.c
 	- screen.c
 	- sound.c	
 
-2. .h:
+2. .h files:
 
 	- comm.h
 	- screen.h
 	- sound.h
 
-3. Other:
+3. Other files:
 
 	- makefile
 	- README.md
@@ -95,7 +95,7 @@ it can be fixed by setting your console character set to "UTF-8".
 	- "PuTTY - Configuration" window can be reached when PuTTY is launched
 	- "PuTTY - Reconfiguration" window can be reached by right-clicking on the top bar
 		of the PuTTY window
-		
+
 2. "Window"               ( window's left side tree )
 3. "Translation"          ( window's left side tree )
 4. "Remote character set" ( window's right side )
