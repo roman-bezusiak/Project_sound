@@ -2,18 +2,22 @@
 
 ## Configuration instructions
 
-### Required software settings
+### Required hardware settings
 
 1. 
 2.
-3.
-4.
+
+### Required software settings ( + additional libraries )
+	
+1. 
+2. 
 
 ## Installation instructions
 
 ### Required hardware
 	
-1. Raspberry Pi Model 3 B
+1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
+	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
 2. External USB sound card
 3. Microphone
 4. Ethernet cable ( RJ45 )
@@ -21,11 +25,8 @@
 
 ### Required software
 	
-1. Raspberry Pi Model 3 B
-2. External USB sound card
-3. Microphone
-4. RPi files
-5. Server files
+1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
+2. Server files
 
 ## Operating instructions
 
@@ -69,7 +70,7 @@ This project is licensed under the GNU General Public License - see the LICENSE 
 
 ## Known bugs and troubleshooting
 
-### "_The graph is not updating_"
+### "_The graph is not updating on the site_"
 	
 #### Problem
 	
@@ -84,11 +85,11 @@ After some time the program **stops getting new data** from the server.
 	
 #### Problem
 	
-The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the UTF-8 symbol _\u2590_** used as a bar in **_screen.c_** file.
+The symbols used as bars are some weird ones and completely do not seem to have a bar form. **The console does not recognize the UTF-8 symbol \u2590** used as a bar in **_screen.c_** file.
 		
 #### Solution
 	
-Set your console character set to **_UTF-8_**.
+Set your console character set to **UTF-8**.
 		
 ##### _PuTTY_ solution
 
