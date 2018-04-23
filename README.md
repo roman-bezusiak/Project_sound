@@ -10,7 +10,7 @@
 	( further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) )
 3. Microphone, 3.5 mm Headphone jack ( further: mic )
 4. ["RJ45" Ethernet cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) 
-	( further: [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+	( further: [e-cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) )
 5. Power supply for the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) 
 	( one of the following ):
 	- USB cable + seperate device's USB port ( PC, laptop, etc. )
