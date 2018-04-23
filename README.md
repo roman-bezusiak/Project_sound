@@ -1,8 +1,52 @@
 # Sound
 
-## Main algorithm
+## Configuration instructions
 
-### I. Mandatory part:
+### Required hardware
+	
+1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
+	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+2. [External USB sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) 
+	( further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) )
+3. Microphone, 3.5 mm Headphone jack ( further: mic )
+4. ["RJ45" Ethernet cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) 
+	( further: [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+5. Power supply for the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) 
+	( one of the following ):
+	- USB cable + seperate device's USB port ( PC, laptop, etc. )
+	- [Common external power supply](https://en.wikipedia.org/wiki/Common_external_power_supply)
+6. Server
+
+### Required hardware set-up
+
+1. Connect the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
+	Internet using the [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi)
+2. Connect the [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
+	to the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi)
+3. Connect the mic to the [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
+4. Connect the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the power supply
+
+## Installation instructions
+
+### Required software
+	
+1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
+2. Server files
+
+### Required software settings ( + external libraries )
+	
+1. Constant **_URL_** in _comm.h_ file should be changed
+	to the your server's address  
+2. 
+
+## Operating instructions
+
+1.
+2.
+
+### Main algorithm
+
+#### I. Mandatory part:
 
 1. Recording **1 second** of audio into _test.wav_ file using 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi)
@@ -13,7 +57,7 @@
 		- Displayed using bar symbol ( UNICODE mode )
 		- Displayed using asterisk symbol ( non-UNICODE mode )
 				
-### II. Optional part:
+#### II. Optional part:
 
 1. Sending FastDB ( 8 decibel values recorded once in every 125 ms )  
 	data to the server
@@ -21,45 +65,6 @@
 	1. All the data with attached dates in .txt file
 	2. Last received 8 pieces of data in .json file		
 3. Outputting the last obtained data on the webpage real-time chart
-
-## Configuration instructions
-
-### Required hardware
-	
-1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
-	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
-2. [External USB sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) 
-	( further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) )
-3. Microphone ( further: mic )
-4. ["RJ45" Ethernet cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) 
-	( further: [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi) )
-5. Server
-
-### Required hardware set-up
-
-1. Connect [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
-	Internet using [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi)
-2. Connect [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
-	to [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi)
-3. Connect 
-
-## Installation instructions
-
-### Required software
-	
-1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
-2. Server files
-
-### Required software settings ( + additional libraries )
-	
-1. Constant **_URL_** in _comm.h_ file should be changed
-	to the your server's address  
-2. 
-
-## Operating instructions
-
-1.
-2.
 
 ## File manifest
 
@@ -89,11 +94,9 @@
 		- sound_log.txt
 		- last_line.json
 
-### Total
+### Total - **_14_** files ( **_16_** including optional ones )
 
-**_14_ files ( _16_ including optional ones )**
-
-#### Remark
+### Remark
 
 Even if there are no optional files, they will be created when the data 
 transmission from [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
@@ -101,12 +104,10 @@ server starts. But, if one runs the program without data transmission from
 [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi), the chart will be drawn 
 only if there is _last_line.json_ file with valid data.
 
-##### Valid data example:
+#### Valid data example:
 
 ```
-
 {"data":"124.00;219.49;317.29;412.53;389.72;256.49;134.82;192.13;"}
-
 ```
 
 ## Copyright and licensing information
