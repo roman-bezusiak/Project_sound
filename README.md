@@ -1,4 +1,4 @@
-# Sound
+# Sound proj.
 
 ## Configuration instructions
 
@@ -8,7 +8,7 @@
 	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
 2. [External USB sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) 
 	( further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) )
-3. Microphone, 3.5 mm Headphone jack ( further: mic )
+3. Microphone, 3.5 mm headphone jack plug ( further: mic )
 4. ["RJ45" Ethernet cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) 
 	( further: [e-cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) )
 5. Power supply for the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) 
@@ -16,6 +16,10 @@
 	- USB cable + seperate device's USB port ( PC, laptop, etc. )
 	- [Common external power supply](https://en.wikipedia.org/wiki/Common_external_power_supply)
 6. Server
+
+#### Optional ( for testing sound recording quality ):
+
+1. Sound playing device, 3.5 mm headphone jack plug ( further: dynamic )
 
 ### Required hardware set-up:
 
@@ -26,20 +30,34 @@
 3. Connect the mic to the [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
 4. Connect the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the power supply
 
+#### Optional ( for testing sound recording quality ):
+
+1. Connect the dynamic to the 
+	[sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
+
 ## Installation instructions
 
-### Required software:
+### Required software and external libraries:
 	
-1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
-2. Server files
-3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) on the 
-4. Check whether _curl_ library is already installed by running the following command: 
+1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files ( 
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+2. Server files ( Server )
+3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) ( Main operating computer )
+4. [Curl library](https://curl.haxx.se/) ( 
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+
+### Required software settings:
+	
+1. Constant **_URL_** in _comm.h_ file should be changed 
+	to the your server's address
+2. Check whether _curl_ library is already installed on the 
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) by running the following command: 
 
 ```
-~$ ls /usr/include/curl
+	~$ ls /usr/include/curl
 ```
 
-If it is not, install it by running following commands:
+If it is not, install it by running the following commands:
 
 ```
 ~$ sudo apt-get update
@@ -47,13 +65,45 @@ If it is not, install it by running following commands:
 ~$ sudo apt-get install libcurl4-openssl-dev
 ```
 
-5.
-
-### Required software settings ( + external libraries ):
-	
-1. Constant **_URL_** in _comm.h_ file should be changed 
-	to the your server's address
-2. 
+3. **alsa-utils** should be version **1.0.25**, in order to make it so, the following 
+	steps should be performed:
+	- Run:
+```
+	~$ sudo nano /etc/apt/sources.list
+```
+	- Add the following line at the end of the file:
+```
+	deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+```
+	- Run:
+```
+	~$ sudo apt-get update
+```
+	- Optional check:  
+```
+	~$ sudo aptitude versions alsa-utils
+```
+	The following should be seen:
+```
+Package alsa-utils:
+i   1.0.25-4              oldstable              500
+p   1.0.28-1              stable                 500
+```
+	- Run:
+```
+	~$ sudo apt-get install alsa-utils=1.0.25-4
+```
+	- Reboot ( if necessary )
+	- Optional test:
+		- Run:
+```
+		~$ arecord -r44100 -c1 -f S16_LE -d5 test.wav
+```
+		- Connect any sound playing device to the 
+		- Run:
+```
+		~$ aplay test.wav
+```
 
 ## Operating instructions
 
@@ -71,15 +121,25 @@ If it is not, install it by running following commands:
 	- Sound decibel level bar chart ( non-DEBUG mode, one of the following ):
 		- Displayed using bar ( ▐ ) symbol ( UNICODE mode )
 		- Displayed using asterisk ( * ) symbol ( non-UNICODE mode )
+
+```
+	Main operating computer ( PuTTY ) =( commands )=> RPi
+	Main operating computer <=( sound data )= RPi =( sound data )=> Server
+```
 				
 #### II. Optional part:
 
 1. Sending FastDB ( 8 decibel values recorded once in every 125 ms ) 
 	data to the server
-2. Storing the data on the server side:		
-	1. All the data with attached dates in .txt file
-	2. Last received 8 pieces of data in .json file		
+2. Storing the data on the server side ( both of the following ):		
+	- All the data with attached dates in _sound_log.txt_ file
+	- Last received **8 pieces** of sound data in _last_line.json_ file		
 3. Outputting the last obtained data on the webpage real-time chart
+
+```
+	...
+	Server =( sound data )=> Web site =( sound graph )=> Main operating computer ( browser )
+```
 
 ## File manifest
 
@@ -135,6 +195,17 @@ See the [LICENSE](LICENCE) file for details
 
 ## Known bugs and troubleshooting
 
+### "_Some commands are not running_"
+	
+#### Problem:
+	
+Some commands can be run only using **_sudo_** prefix, which gives one administrator 
+	rights.
+		
+#### Solution:
+	
+
+
 ### "_The graph is not updating on the site_"
 	
 #### Problem:
@@ -143,8 +214,9 @@ There is only one graph state on the site and it does not change.
 		
 #### Solution:
 	
-1. Check whether [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) is working
-2. Refresh the web page
+1. Check the set-up 
+2. Check whether the _sound.a_ is running
+3. Refresh the web page
 		
 ### "_There are some weird symbols changing in the console window_"
 	
