@@ -320,7 +320,7 @@ _comm.h_ file in the following line:
 	- **_Other_ files** ( **_1_** ):
 		- makefile
 
-- Server ( **_5_**, **_7_** including optional ones ):
+- Server ( **_5_** ( **_7_** including optional ones ) ):
 	- **_Front-end_ files** ( **_2_** ):
 		- sound.html
 		- soundGraph.js
@@ -335,7 +335,7 @@ _comm.h_ file in the following line:
 - Other ( **_1_** ):
 	- README.md
 
-### Total: **_14_** files ( **_16_** including optional ones )
+#### Total: **_14_** files ( **_16_** including optional ones )
 
 #### Remark
 
