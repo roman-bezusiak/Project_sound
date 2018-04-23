@@ -65,44 +65,128 @@ If it is not, install it by running the following commands:
 ~$ sudo apt-get install libcurl4-openssl-dev
 ```
 
-3. **alsa-utils** should be version **1.0.25**, in order to make it so, the following 
-	steps should be performed:
-	- Run:
-```
-	~$ sudo nano /etc/apt/sources.list
-```
-	- Add the following line at the end of the file:
-```
-	deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
-```
+3. Set USB Sound Card as Default by performing the following steps:  
 Run:
+
 ```
-	~$ sudo apt-get update
+~$ lsusb
 ```
-Optional check:  
-```
-	~$ sudo aptitude versions alsa-utils
-```
+
 The following should be seen:
+
 ```
-Package alsa-utils:
-i   1.0.25-4              oldstable              500
-p   1.0.28-1              stable                 500
+Bus 001 Device 004: ID 0d8c:000c C-Media Electronics, Inc. Audio Adapter
+Bus 001 Device 003: ID 0424:ec00 Standard Microsystems Corp. SMSC9512/9514 Fast Ethernet Adapter
+Bus 001 Device 002: ID 0424:9514 Standard Microsystems Corp.
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
+
 Run:
+
 ```
-	~$ sudo apt-get install alsa-utils=1.0.25-4
+~$ sudo nano /etc/asound.conf
 ```
-Reboot ( if necessary )
-Optional test:
-		- Run:
+
+Contents of _asound.conf_ should be changed to the following:
+
 ```
-		~$ arecord -r44100 -c1 -f S16_LE -d5 test.wav
+pcm.!default
+{
+	type plug
+	slave
+	{
+		pcm "hw:1,0"
+	}
+}
+
+ctl.!default
+{
+    type hw
+    card 1
+}
 ```
-Connect any sound playing device to the 
+
+Go to the home directory of the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi). 
 Run:
+
 ```
-		~$ aplay test.wav
+~$ nano .asoundrc
+```
+
+Contents of _.asoundrc_ should be identical to ones of _asound.conf_. Run:
+
+```
+~$ alsamixer
+```
+
+In the opened menu [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) 
+should be seen as a default.
+
+```
+	Card: C-Media USB Headphone Set
+	Chip: USB Mixer
+	View: F3:[Playback] F4: Capture  F5: All
+	Item: Headphone [dB gain: -20.13, -20.13]
+```
+
+Change sound volume bars of the mic and dynamic according to your preferences:
+
+```
+	   ┌──┐           ┌──┐
+	   │  │           │  │
+	   │  │           │  │
+	   │  │           │  │
+	   │  │           │  │
+	   │  │           │  │
+	   │  │           │  │
+	   │  │           │▒▒│
+	   │▒▒│           │▒▒│
+	   │▒▒│           │▒▒│
+	   │▒▒│           │▒▒│
+	   │▒▒│           │▒▒│
+	   │▒▒│           │▒▒│
+	   │▒▒│           │▒▒│
+	   ├──┤           ├──┤
+	   │OO│           │MM│
+	   └──┘           └──┘
+	  19<>19           52
+	Headphone         Mic         
+
+```
+
+4. **alsa-utils** should be version **1.0.25**, in order to make it so, the following 
+	steps should be performed:  
+Run:
+
+```
+~$ sudo nano /etc/apt/sources.list
+```
+
+Add the following line at the end of _sources.list_:
+
+```
+deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+```
+
+Run:
+
+```
+~$ sudo apt-get update
+~$ sudo apt-get install alsa-utils=1.0.25-4
+```
+
+Reboot ( if necessary ). Optional test of the sound quality:  
+Run:
+
+```
+~$ arecord -r44100 -c1 -f S16_LE -d5 test.wav
+```
+
+Connect dynamic to the 
+[sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards). Run:
+
+```
+~$ aplay test.wav
 ```
 
 ## Operating instructions
