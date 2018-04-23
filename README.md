@@ -50,7 +50,7 @@
 	
 1. Constant **_URL_** in _comm.h_ file should be changed 
 	to the your server's address
-2. Check whether _curl_ library is already installed on the 
+2. Check whether **curl** library is already installed on the 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) by running the following command: 
 
 ```
@@ -75,32 +75,32 @@ If it is not, install it by running the following commands:
 ```
 	deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
 ```
-	- Run:
+Run:
 ```
 	~$ sudo apt-get update
 ```
-	- Optional check:  
+Optional check:  
 ```
 	~$ sudo aptitude versions alsa-utils
 ```
-	The following should be seen:
+The following should be seen:
 ```
 Package alsa-utils:
 i   1.0.25-4              oldstable              500
 p   1.0.28-1              stable                 500
 ```
-	- Run:
+Run:
 ```
 	~$ sudo apt-get install alsa-utils=1.0.25-4
 ```
-	- Reboot ( if necessary )
-	- Optional test:
+Reboot ( if necessary )
+Optional test:
 		- Run:
 ```
 		~$ arecord -r44100 -c1 -f S16_LE -d5 test.wav
 ```
-		- Connect any sound playing device to the 
-		- Run:
+Connect any sound playing device to the 
+Run:
 ```
 		~$ aplay test.wav
 ```
