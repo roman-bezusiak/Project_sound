@@ -307,7 +307,7 @@ _comm.h_ file in the following line:
 
 ### List:
 
-- [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) ( **_9_** ):
+- [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) ( **_8_** ):
 	- **_.c_ files** ( **_4_** ):
 		- comm.c
 		- main.c
@@ -317,11 +317,10 @@ _comm.h_ file in the following line:
 		- comm.h
 		- screen.h
 		- sound.h
-	- **_Other_ files** ( **_2_** ):
+	- **_Other_ files** ( **_1_** ):
 		- makefile
-		- README.md
 
-- Server ( **_5_** ):
+- Server ( **_5_**, **_7_** including optional ones ):
 	- **_Front-end_ files** ( **_2_** ):
 		- sound.html
 		- soundGraph.js
@@ -332,6 +331,9 @@ _comm.h_ file in the following line:
 	- **_Optional_ files** ( **_2_** ):
 		- sound_log.txt
 		- last_line.json
+
+- Other ( **_1_** ):
+	- README.md
 
 ### Total: **_14_** files ( **_16_** including optional ones )
 
