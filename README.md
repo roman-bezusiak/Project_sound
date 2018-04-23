@@ -66,6 +66,7 @@ If it is not, install it by running the following commands:
 ```
 
 3. Set USB Sound Card as Default by performing the following steps:  
+
 Run:
 
 ```
@@ -176,6 +177,7 @@ Run:
 ```
 
 Reboot ( if necessary ). Optional test of the sound quality:  
+  
 Run:
 
 ```
