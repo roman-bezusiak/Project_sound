@@ -42,8 +42,7 @@
 
 ## Operating instructions
 
-1.
-2.
+
 
 ### Main algorithm
 
