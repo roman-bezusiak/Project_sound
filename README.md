@@ -355,7 +355,7 @@ only if there is _last_line.json_ file with valid data.
 
 This project is licensed under the 
 [**GNU General Public License**](https://en.wikipedia.org/wiki/GNU_General_Public_License). 
-See the [_LICENSE_](LICENCE) file for details
+See the [_LICENSE_](LICENSE) file for details
 
 ## Known bugs and troubleshooting
 
