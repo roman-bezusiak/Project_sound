@@ -159,9 +159,6 @@ Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF
 ### Authors:
 - **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak, GitHub profile](https://github.com/roman-bezusiak)
 
-### Special thanks
-- **Chao Gao** - _Project supervisor, teacher_ - [Chao Gao](http://www.puv.fi/en/contact/?person=gc)
-
 ### Used resources:
 - **[Wikimedia Foundation Inc.](https://wikimediafoundation.org/wiki/Home), 
 Wikipedia** - _References_ - [wikipedia.org](https://www.wikipedia.org/)
