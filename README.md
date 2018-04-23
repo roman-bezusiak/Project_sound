@@ -32,6 +32,7 @@
 	
 1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
 2. Server files
+3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY)
 
 ### Required software settings ( + external libraries )
 	
@@ -54,12 +55,12 @@
 	- Header data and list of **80 [RMS](https://en.wikipedia.org/wiki/Root_mean_square)** 
 		values ( DEBUG mode )
 	- Sound decibel level bar chart ( non-DEBUG mode, one of the following ):
-		- Displayed using bar symbol ( UNICODE mode )
-		- Displayed using asterisk symbol ( non-UNICODE mode )
+		- Displayed using bar ( ▐ ) symbol ( UNICODE mode )
+		- Displayed using asterisk ( * ) symbol ( non-UNICODE mode )
 				
 #### II. Optional part:
 
-1. Sending FastDB ( 8 decibel values recorded once in every 125 ms )  
+1. Sending FastDB ( 8 decibel values recorded once in every 125 ms ) 
 	data to the server
 2. Storing the data on the server side:		
 	1. All the data with attached dates in .txt file
@@ -96,7 +97,7 @@
 
 ### Total - **_14_** files ( **_16_** including optional ones )
 
-### Remark
+#### Remark
 
 Even if there are no optional files, they will be created when the data 
 transmission from [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
@@ -104,7 +105,7 @@ server starts. But, if one runs the program without data transmission from
 [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi), the chart will be drawn 
 only if there is _last_line.json_ file with valid data.
 
-#### Valid data example:
+##### Valid data example:
 
 ```
 {"data":"124.00;219.49;317.29;412.53;389.72;256.49;134.82;192.13;"}
@@ -167,4 +168,5 @@ Wikipedia** - _References_ - [wikipedia.org](https://www.wikipedia.org/)
 
 ### Used third party libraries:
 - **Chart.js** - _Graph drawing ( Front-end )_ - [chartjs.org](http://www.chartjs.org/)
+- **jQuery.js** - _AJAX_ - [jquery.com](https://jquery.com/)
 - **curl/curl.h** - _Data transmission_ - [curl.haxx.se](https://curl.haxx.se/)
