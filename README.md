@@ -77,7 +77,8 @@ If it is not, install it by running the following commands:
 ~$ sudo apt-get install libcurl4-openssl-dev
 ```
 
-3. Set USB Sound Card as Default by performing the following steps:  
+3. Set the [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) as 
+Default by performing the following steps:  
 
 Run:
 
@@ -114,19 +115,20 @@ pcm.!default
 
 ctl.!default
 {
-    type hw
-    card 1
+	type hw
+	card 1
 }
 ```
 
-Go to the home directory of the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi). 
+Go to the home directory of the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi).  
 Run:
 
 ```
 ~$ nano .asoundrc
 ```
 
-Contents of _.asoundrc_ should be identical to ones of _asound.conf_. Run:
+Contents of _.asoundrc_ should be identical to ones of _asound.conf_.  
+Run:
 
 ```
 ~$ alsamixer
@@ -350,8 +352,8 @@ only if there is _last_line.json_ file with valid data.
 ## Copyright and licensing information
 
 This project is licensed under the 
-[GNU General Public License](https://en.wikipedia.org/wiki/GNU_General_Public_License). 
-See the [LICENSE](LICENCE) file for details
+[**GNU General Public License**](https://en.wikipedia.org/wiki/GNU_General_Public_License). 
+See the [_LICENSE_](LICENCE) file for details
 
 ## Known bugs and troubleshooting
 
@@ -410,9 +412,12 @@ Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF
 
 ### Used resources:
 - **[Wikimedia Foundation Inc.](https://wikimediafoundation.org/wiki/Home), 
-	Wikipedia** - _References_ - [wikipedia.org](https://www.wikipedia.org/)
+	Wikipedia** - _Encyclopedia materials_ - 
+	[wikipedia.org](https://www.wikipedia.org/)
 
 ### Used third party libraries:
-- **Chart.js**    - _Graph drawing ( Front-end )_ - [chartjs.org](http://www.chartjs.org/)
-- **jQuery.js**   - _AJAX_                        - [jquery.com](https://jquery.com/)
-- **curl/curl.h** - _Data transmission_           - [curl.haxx.se](https://curl.haxx.se/)
+- **Chart.js**    - _Graph drawing ( Front-end )_ - 
+	[chartjs.org](http://www.chartjs.org/)
+- **jQuery.js**   - _AJAX_ - [jquery.com](https://jquery.com/)
+- **curl/curl.h** - _Data transmission_ - 
+	[curl.haxx.se](https://curl.haxx.se/)
