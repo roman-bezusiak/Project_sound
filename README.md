@@ -2,7 +2,7 @@
 
 ## Configuration instructions
 
-### Required hardware
+### Required hardware:
 	
 1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
 	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
@@ -17,7 +17,7 @@
 	- [Common external power supply](https://en.wikipedia.org/wiki/Common_external_power_supply)
 6. Server
 
-### Required hardware set-up
+### Required hardware set-up:
 
 1. Connect the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
 	Internet using the [e-cable](https://en.wikipedia.org/wiki/Raspberry_Pi)
@@ -28,16 +28,31 @@
 
 ## Installation instructions
 
-### Required software
+### Required software:
 	
 1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files
 2. Server files
-3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY)
+3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) on the 
+4. Check whether _curl_ library is already installed by running the following command: 
 
-### Required software settings ( + external libraries )
+```
+~$ ls /usr/include/curl
+```
+
+If it is not, install it by running following commands:
+
+```
+~$ sudo apt-get update
+~$ sudo apt-get install libcurl3
+~$ sudo apt-get install libcurl4-openssl-dev
+```
+
+5.
+
+### Required software settings ( + external libraries ):
 	
-1. Constant **_URL_** in _comm.h_ file should be changed
-	to the your server's address  
+1. Constant **_URL_** in _comm.h_ file should be changed 
+	to the your server's address
 2. 
 
 ## Operating instructions
@@ -68,6 +83,8 @@
 
 ## File manifest
 
+### List:
+
 - RPi ( **_9_** ):
 	- **_.c_ files** ( **_4_** ):
 		- comm.c
@@ -94,7 +111,7 @@
 		- sound_log.txt
 		- last_line.json
 
-### Total - **_14_** files ( **_16_** including optional ones )
+### Total: **_14_** files ( **_16_** including optional ones )
 
 #### Remark
 
@@ -120,28 +137,28 @@ See the [LICENSE](LICENCE) file for details
 
 ### "_The graph is not updating on the site_"
 	
-#### Problem
+#### Problem:
 	
 There is only one graph state on the site and it does not change.
 		
-#### Solution
+#### Solution:
 	
 1. Check whether [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) is working
 2. Refresh the web page
 		
 ### "_There are some weird symbols changing in the console window_"
 	
-#### Problem
+#### Problem:
 	
 The symbols used as bars are some weird ones and completely do not seem to have a bar form. 
 	**The console does not recognize the [UTF-8](https://en.wikipedia.org/wiki/UTF-8) symbol 
 	[U+2590](https://en.wikipedia.org/wiki/Block_Elements)** used as a bar in **_screen.c_** file.
 		
-#### Solution
+#### Solution:
 	
 Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8).
 		
-##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution
+##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution:
 
 1. Go to the **_console settings_** ( choose either way )
 	- **_PuTTY - Configuration_** window can be reached when [PuTTY](https://en.wikipedia.org/wiki/PuTTY) 
