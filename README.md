@@ -246,7 +246,7 @@ Run:
 	- All the data with attached dates in _sound_log.txt_ file
 	- Last received **8 pieces** of sound data in _last_line.json_ file	
 
-3. Outputting the last obtained data on the webpage real-time chart
+3. Outputting the last obtained data on the responsive webpage real-time chart
 
 ```
 
