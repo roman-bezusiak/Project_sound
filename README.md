@@ -258,11 +258,13 @@ Run:
 	└─────────────────┘                      │    ( soundGraph.js ) │
 	                                         │       ( sound.html ) │
 	┌─────────────────┐                      └──────────────────────┘
-	│ MOC             │  ←  ( sound graph )   ↲
+	│ MOC             │  ←   ( sound graph )   ↲
 	│     ( browser ) │
 	└─────────────────┘               
 
 ```
+
+![Web site graph example](web_site_graph_example.png)
 
 ### Choosing the operating modes
 
