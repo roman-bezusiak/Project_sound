@@ -21,7 +21,7 @@
 	- [Common external power supply](https://en.wikipedia.org/wiki/Common_external_power_supply)
 
 6. Server
-7. Main operation computer ( PC, laptop, etc. )
+7. Main operating computer ( PC, laptop, etc.; further: MOC )
 
 #### Optional ( for testing sound recording quality ):
 
@@ -46,14 +46,15 @@ Connect the dynamic to the
 
 ## Installation instructions
 
-### Required software and external libraries:
+### Required software:
 	
 1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files ( 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
 
 2. Server files ( Server )
 
-3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) ( Main operating computer )
+3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) ( 
+	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware) )
 
 4. [Curl library](https://curl.haxx.se/) ( 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
@@ -63,8 +64,10 @@ Connect the dynamic to the
 1. Constant **_URL_** in _comm.h_ file should be changed 
 	to the your server's address
 
-2. Check whether **curl** library is already installed on the 
-	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) by running the following command: 
+2. Check whether [**Curl library**](https://curl.haxx.se/) is already installed on 
+	the 
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) by running the following 
+	command: 
 
 ```
 ~$ ls /usr/include/curl
@@ -226,8 +229,8 @@ Run:
 		- Displayed using asterisk ( * ) symbol ( non-UNICODE mode )
 
 ```
-	Main operating computer ( PuTTY ) =( commands )=> RPi
-	RPi =( sound data )=> Main operating computer
+	MOC ( PuTTY ) =( commands )=> RPi
+	RPi =( sound data )=> MOC
 ```
 				
 #### II. Optional part ( COMM mode ):
@@ -244,7 +247,7 @@ Run:
 ```
 	...
 	RPi =( sound data )=> Server
-	Server =( sound data )=> Web site =( sound graph )=> Main operating computer ( browser )
+	Server =( sound data )=> Web site =( sound graph )=> MOC ( browser )
 ```
 
 ### Pre-settings
@@ -278,7 +281,7 @@ The **_UNICODE_** constant is defined in _screen.h_. In order to set it off / on
 / remove two slashes ( // ) respectively in the beginning of the following line:
 
 ```
-#define UNICODE // Unicode usage for making beautiful output
+#define UNICODE // Conditional compiling
 ```
 
 #### COMM / non-COMM mode
@@ -289,6 +292,8 @@ remove two slashes ( // ) respectively in the beginning of the following line:
 ```
 #define DEBUG // Conditional compiling
 ```
+
+### Setting the servers **_URL_** address on the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) side
 
 When **_COMM_** mode is set, one should change the **_URL_** address in 
 _comm.h_ file in the following line:
@@ -304,14 +309,21 @@ _comm.h_ file in the following line:
 2. Connect to the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) via 
 	[PuTTY](https://en.wikipedia.org/wiki/PuTTY)
 
-3. Run:
+3. Make the object files and the _sound.a_ application by running 
+	the following command:
 
 ```
 ~$ make
+```
+
+4. Run the application by entering the following command:
+
+```
 ~$ ./sound.a
 ```
 
-4. Go to the server's **_URL_** in the browser using main operating computer
+4. Go to the server's **_URL_** in the browser on the 
+	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware)
 
 ## File manifest
 
@@ -367,18 +379,7 @@ This project is licensed under the
 [**GNU General Public License**](https://en.wikipedia.org/wiki/GNU_General_Public_License). 
 See the [_LICENSE_](LICENSE) file for details
 
-## Known bugs and troubleshooting
-
-### "_Some commands are not running_"
-	
-#### Problem:
-	
-Some commands can be run only using **_sudo_** prefix, which gives one administrator 
-	rights.
-		
-#### Solution:
-	
-Write **_sudo_** before the command.
+## Known bugs, problems and troubleshooting
 
 ### "_The graph is not updating on the site_"
 	
@@ -408,7 +409,7 @@ or, if the console does not support [**UTF-8**](https://en.wikipedia.org/wiki/UT
 set 
 [non-UNICODE mode](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode).
 		
-##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution:
+#### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution:
 
 1. Go to the **_console settings_** ( choose either way )
 	- **_PuTTY - Configuration_** window can be reached when [PuTTY](https://en.wikipedia.org/wiki/PuTTY) 
