@@ -252,9 +252,16 @@ Run:
 There are some preset values ruling conditional compiling in the 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files:
 
-1. **_DEBUG_** mode   - off ( **non-DEBUG mode** or **DEBUG** undefined )
-2. **_UNICODE_** mode - on  ( **UNICODE mode** or **UNICODE** defined )
-3. **_COMM_** mode    - on  ( **COMM mode** or **COMM** defined )
+1. [**_DEBUG_ mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) - off ( 
+	[**non-DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) or 
+	[**DEBUG**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) undefined )
+2. [**_UNICODE_ mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) - on 
+	( [**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) 
+	or [**UNICODE**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) defined )
+3. [**_COMM_ mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
+	- on ( [**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
+	or [**COMM**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
+	defined )
 
 #### DEBUG / non-DEBUG mode
 
@@ -398,7 +405,8 @@ The symbols used as bars are some weird ones and completely do not seem to have 
 	
 Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8) 
 or, if the console does not support [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8), 
-set [non-UNICODE mode]().
+set 
+[non-UNICODE mode](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode).
 		
 ##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution:
 
