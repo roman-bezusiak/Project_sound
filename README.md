@@ -148,7 +148,7 @@ should be seen as a default.
 	Item: Headphone [dB gain: -20.13, -20.13]
 ```
 
-Change sound volume bars of the mic and dynamic according to your preferences:
+Adjust sound settings of the mic and dynamic according to your preferences:
 
 ```
 	   ┌──┐           ┌──┐
@@ -229,8 +229,15 @@ Run:
 		- Displayed using asterisk ( * ) symbol ( non-UNICODE mode )
 
 ```
-	MOC ( PuTTY ) =( commands )=> RPi
-	RPi =( sound data )=> MOC
+
+	┌───────────────┐                  ┌────────────────┐     ┌─────────────────┐
+	│ MOC           │  →  commands  →  │ RPi            │  ↔  │ Sound card      │
+	│     ( PuTTY ) │  ← sound info ←  │    ( sound.a ) │     └─────────────────┘
+	└───────────────┘                  └────────────────┘        ↕         ↕
+	                                                          ┌─────┐ ┌─────────┐
+	                                                          │ mic │ │ dynamic │
+	                                                          └─────┘ └─────────┘
+
 ```
 				
 #### II. Optional part ( COMM mode ):
@@ -245,9 +252,19 @@ Run:
 3. Outputting the last obtained data on the webpage real-time chart
 
 ```
-	...
-	RPi =( sound data )=> Server
-	Server =( sound data )=> Web site =( sound graph )=> MOC ( browser )
+
+	............................................................................
+
+	┌─────────────────┐                  ┌──────────────────────┐
+	│ RPi             │  → sound data →  │ Server               │
+	│     ( sound.a ) │                  │        ( sound.php ) │
+	└─────────────────┘                  │    ( soundGraph.js ) │
+	                                     │       ( sound.html ) │
+	┌─────────────────┐                  └──────────────────────┘
+	│ MOC             │  ←   sound graph   ↲
+	│     ( browser ) │
+	└─────────────────┘               
+
 ```
 
 ### Pre-settings
@@ -293,7 +310,7 @@ remove two slashes ( // ) respectively in the beginning of the following line:
 #define DEBUG // Conditional compiling
 ```
 
-### Setting the servers **_URL_** address on the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) side
+#### Setting the servers **_URL_** address on the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) side
 
 When **_COMM_** mode is set, one should change the **_URL_** address in 
 _comm.h_ file in the following line:
