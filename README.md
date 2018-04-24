@@ -60,11 +60,8 @@ Connect the dynamic to the
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
 
 ### Required software settings:
-	
-1. Constant **_URL_** in _comm.h_ file should be changed 
-	to the your server's address
 
-2. Check whether [**Curl library**](https://curl.haxx.se/) is already installed on 
+1. Check whether [**Curl library**](https://curl.haxx.se/) is already installed on 
 	the 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) by running the following 
 	command: 
@@ -81,7 +78,7 @@ If it is not, install it by running the following commands:
 ~$ sudo apt-get install libcurl4-openssl-dev
 ```
 
-3. Set the [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) as 
+2. Set the [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) as 
 Default by performing the following steps:  
 
 Run:
@@ -173,7 +170,7 @@ Adjust sound settings of the mic and dynamic according to your preferences:
 
 ```
 
-4. **alsa-utils** should be version **1.0.25**, in order to make it so, the following 
+3. **alsa-utils** should be version **1.0.25**, in order to make it so, the following 
 	steps should be performed:  
   
 Run:
@@ -267,7 +264,7 @@ Run:
 
 ```
 
-### Pre-settings
+### Choosing the operating modes
 
 There are some preset values ruling conditional compiling in the 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files:
@@ -310,7 +307,7 @@ remove two slashes ( // ) respectively in the beginning of the following line:
 #define DEBUG // Conditional compiling
 ```
 
-#### Setting the servers **_URL_** address on the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) side
+### Setting the servers **_URL_** address on the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) side
 
 When **_COMM_** mode is set, one should change the **_URL_** address in 
 _comm.h_ file in the following line:
