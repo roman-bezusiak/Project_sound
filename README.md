@@ -21,6 +21,7 @@
 	- [Common external power supply](https://en.wikipedia.org/wiki/Common_external_power_supply)
 
 6. Server
+7. Main operation computer ( PC, laptop, etc. )
 
 #### Optional ( for testing sound recording quality ):
 
@@ -191,8 +192,9 @@ Run:
 ~$ sudo apt-get install alsa-utils=1.0.25-4
 ```
 
-Reboot ( if necessary ). Optional test of the sound quality:  
+Reboot ( if necessary ).
 
+Optional test of the sound quality:  
 Run:
 
 ```
@@ -200,7 +202,8 @@ Run:
 ```
 
 Connect dynamic to the 
-[sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards). Run:
+[sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards). 
+Run:
 
 ```
 ~$ aplay test.wav
@@ -249,11 +252,11 @@ Connect dynamic to the
 There are some preset values ruling conditional compiling in the 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files:
 
-1. **_DEBUG_** mode   - off ( **DEBUG** undefined )
-2. **_UNICODE_** mode - on  ( **UNICODE** defined )
-3. **_COMM_** mode    - on  ( **COMM** defined )
+1. **_DEBUG_** mode   - off ( **non-DEBUG mode** or **DEBUG** undefined )
+2. **_UNICODE_** mode - on  ( **UNICODE mode** or **UNICODE** defined )
+3. **_COMM_** mode    - on  ( **COMM mode** or **COMM** defined )
 
-#### DEBUG mode
+#### DEBUG / non-DEBUG mode
 
 The **_DEBUG_** constant is defined in _sound.h_. In order to set it off / on, add / 
 remove two slashes ( // ) respectively in the beginning of the following line:
@@ -262,7 +265,7 @@ remove two slashes ( // ) respectively in the beginning of the following line:
 #define DEBUG // Conditional compiling
 ```
 
-#### UNICODE mode
+#### UNICODE / non-UNICODE mode
 
 The **_UNICODE_** constant is defined in _screen.h_. In order to set it off / on, add 
 / remove two slashes ( // ) respectively in the beginning of the following line:
@@ -271,7 +274,7 @@ The **_UNICODE_** constant is defined in _screen.h_. In order to set it off / on
 #define UNICODE // Unicode usage for making beautiful output
 ```
 
-#### COMM mode
+#### COMM / non-COMM mode
 
 The **_COMM_** constant is defined in _comm.h_. In order to set it off / on, add / 
 remove two slashes ( // ) respectively in the beginning of the following line:
@@ -345,7 +348,7 @@ server starts. But, if one runs the program without data transmission from
 [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi), the chart will be drawn 
 only if there is _last_line.json_ file with valid data.
 
-##### Valid data example:
+##### Valid _last_line.json_ data example:
 
 ```
 {"data":"124.00;219.49;317.29;412.53;389.72;256.49;134.82;192.13;"}
@@ -378,7 +381,8 @@ There is only one graph state on the site and it does not change.
 		
 #### Solution:
 	
-1. Check the set-up 
+1. Check the 
+	[set-up](https://github.com/roman-bezusiak/Sound-proj.#required-hardware-set-up)
 2. Check whether the _sound.a_ is running 
 3. Refresh the web page 
 		
@@ -392,7 +396,9 @@ The symbols used as bars are some weird ones and completely do not seem to have 
 		
 #### Solution:
 	
-Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8).
+Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8) 
+or, if the console does not support [**UTF-8**](https://en.wikipedia.org/wiki/UTF-8), 
+set [non-UNICODE mode]().
 		
 ##### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution:
 
@@ -410,7 +416,8 @@ Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF
 ## Credits and acknowledgments
 
 ### Authors:
-- **Roman Bezusiak** - _Initial work_ - [Roman Bezusiak, GitHub profile](https://github.com/roman-bezusiak)
+- **Roman Bezusiak** - _Initial work_ - 
+	[Roman Bezusiak ( GitHub profile )](https://github.com/roman-bezusiak)
 
 ### Used resources:
 - **[Wikimedia Foundation Inc.](https://wikimediafoundation.org/wiki/Home), 
@@ -418,8 +425,9 @@ Set the console's character set to [**UTF-8**](https://en.wikipedia.org/wiki/UTF
 	[wikipedia.org](https://www.wikipedia.org/)
 
 ### Used third party libraries:
-- **Chart.js**    - _Graph drawing ( Front-end )_ - 
+- **Chart.js**    - _Graph drawing on the web site_ - 
 	[chartjs.org](http://www.chartjs.org/)
 - **jQuery.js**   - _AJAX_ - [jquery.com](https://jquery.com/)
-- **curl/curl.h** - _Data transmission_ - 
+- **curl/curl.h** - _Data transmission from the 
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the server_ - 
 	[curl.haxx.se](https://curl.haxx.se/)
