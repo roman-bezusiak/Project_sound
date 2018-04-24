@@ -258,8 +258,8 @@ There are some preset values ruling conditional compiling in the
 2. [**_UNICODE_ mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) - on 
 	( [**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) 
 	or [**UNICODE**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) defined )
-3. [**_COMM_ mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
-	- on ( [**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
+3. [**_COMM_ mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) - on 
+	( [**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
 	or [**COMM**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
 	defined )
 
