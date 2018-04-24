@@ -1,4 +1,4 @@
-# Sound proj.
+# Sound project
 
 ## Configuration instructions
 
