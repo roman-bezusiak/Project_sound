@@ -1,4 +1,10 @@
-OBJ = main.o sound.o screen.o comm.o
+# Defining object files
+OBJ = main.o comm.o screen.o sound.o
+
+# Defining dependencies
+DEPS = comm.h screen.h sound.h
+
+# Defining the application 
 APPNAME = sound.a
 
 # Link rule
@@ -6,19 +12,9 @@ $(APPNAME) : $(OBJ)
 	gcc -o $(APPNAME) $(OBJ) -lm -lcurl
 
 # Compiling rule
-%.o : %.c
+%.o : %.c $(DEPS)
 	gcc -c -o $@ $<
 
 # Cleaning rule
 clean : 
 	rm $(OBJ) $(APPNAME)
-
-# Git adding rule
-add :
-	git add *.c *.h *.md *.php *.html *.js makefile	
-
-# Git committing & pushing rule
-git : 
-	git commit -a --allow-empty-message -m ''
-	git push origin master
-	
