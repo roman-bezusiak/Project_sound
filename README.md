@@ -343,8 +343,11 @@ _comm.h_ file in the following line:
 ~$ ./sound.a
 ```
 
-4. Go to the server's **_URL_** in the browser on the 
+5. Go to the server's **_URL_** in the browser on the 
 	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware)
+
+In order to stop the program, press Ctrl + C in the 
+[PuTTY](https://en.wikipedia.org/wiki/PuTTY) console window.
 
 ## File manifest
 
