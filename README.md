@@ -375,10 +375,11 @@ _comm.h_ file in the following line:
 		- sound_log.txt
 		- last_line.json
 
-- Other ( **_1_** ):
+- Other ( **_2_** ):
 	- README.md
+	- LICENCE
 
-#### Total: **_14_** files ( **_16_** including optional ones )
+#### Total: **_15_** files ( **_17_** including optional ones )
 
 #### Remark
 
