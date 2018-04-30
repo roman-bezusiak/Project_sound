@@ -223,7 +223,7 @@ Run:
 		values ( 
 		[**DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) )
 	- Sound decibel level bar chart ( 
-	[**non-DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode), 
+	[**non-DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode); 
 	one of the following ):
 		- Displayed using bar ( ▐ ) symbol ( 
 			[**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) )
