@@ -220,10 +220,15 @@ Run:
 
 2. Outputting corresponding data in the console window ( one of the following ):
 	- Header data and list of **80 [RMS](https://en.wikipedia.org/wiki/Root_mean_square)** 
-		values ( DEBUG mode )
-	- Sound decibel level bar chart ( non-DEBUG mode, one of the following ):
-		- Displayed using bar ( ▐ ) symbol ( UNICODE mode )
-		- Displayed using asterisk ( * ) symbol ( non-UNICODE mode )
+		values ( 
+		[**DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) )
+	- Sound decibel level bar chart ( 
+	[**non-DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode), 
+	one of the following ):
+		- Displayed using bar ( ▐ ) symbol ( 
+			[**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) )
+		- Displayed using asterisk ( * ) symbol ( 
+			[**non-UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) )
 
 ```
 
@@ -237,7 +242,7 @@ Run:
 
 ```
 				
-#### II. Optional part ( COMM mode ):
+#### II. Optional part ( [**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) ):
 
 1. Sending FastDB ( 8 decibel values recorded once in every 125 ms ) 
 	data to the server
