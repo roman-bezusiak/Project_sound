@@ -378,11 +378,12 @@ In order to stop the program, press Ctrl + C in the
 		- sound_log.txt
 		- last_line.json
 
-- Other ( **_2_** ):
+- Other ( **_3_** ):
 	- README.md
 	- LICENCE
+	- web_site_graph_example.png
 
-#### Total: **_15_** files ( **_17_** including optional ones )
+#### Total: **_16_** files ( **_18_** including optional ones )
 
 #### Remark
 
