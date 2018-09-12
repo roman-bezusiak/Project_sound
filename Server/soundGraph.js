@@ -4,15 +4,15 @@ $( () =>
 	var cnvs  = document.getElementById( "soundGraph" ); // Main canvas
 	var ctx   = cnvs.getContext( "2d" );                 // Main context
 	var soundGraph;      // Main chart object
-    var sdata      = ""; // Sound data from the server ( string )
-    var sdata_prev = ""; // Previous sound data from the server ( string )
-    var fdata      = []; // Sound data from the server ( float array )
+	var sdata      = ""; // Sound data from the server ( string )
+	var sdata_prev = ""; // Previous sound data from the server ( string )
+	var fdata      = []; // Sound data from the server ( float array )
 	var buff       = ""; // Transmission buffer for string to float parsing
 	var i, j       = 0;  // Loop counters
 	var data_update_delay = 500;              // Data update delay ( milliseconds )
 	var server_json_file  = "last_line.json"; // Name of the file with
-											  // the newest sound data on
-											  // the server side
+						  // the newest sound data on
+						  // the server side
 	
 	/**
 		Resises the canvas to the inner size parameters
