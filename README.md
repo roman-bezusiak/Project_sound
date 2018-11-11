@@ -2,7 +2,7 @@
 
 ## Configuration instructions
 
-### Required hardware:
+### Required equipment:
 	
 1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
 	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
@@ -27,7 +27,7 @@
 
 Sound playing device, 3.5 mm headphone jack plug ( further: dynamic )
 
-### Required hardware set-up:
+### Required equipment set-up:
 
 1. Connect the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the 
 	Internet using the [e-cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C)
