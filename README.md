@@ -459,7 +459,7 @@ set
 	Wikipedia** - _Encyclopedia materials_ - 
 	[wikipedia.org](https://www.wikipedia.org/)
 
-### Used third party libraries:
+### Used code:
 - **Chart.js**    - _Graph drawing on the web site_ - 
 	[chartjs.org](http://www.chartjs.org/)
 - **jQuery.js**   - _AJAX_ - [jquery.com](https://jquery.com/)
