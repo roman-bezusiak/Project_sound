@@ -1,15 +1,14 @@
 // Starting the script when the page is loaded
-$( () =>
-{
-	var cnvs  = document.getElementById( "soundGraph" ); // Main canvas
-	var ctx   = cnvs.getContext( "2d" );                 // Main context
+$(() => {
+	var cnvs  = document.getElementById("soundGraph"); // Main canvas
+	var ctx   = cnvs.getContext("2d");                 // Main context
 	var soundGraph;      // Main chart object
-	var sdata      = ""; // Sound data from the server ( string )
-	var sdata_prev = ""; // Previous sound data from the server ( string )
-	var fdata      = []; // Sound data from the server ( float array )
+	var sdata      = ""; // Sound data from the server (string)
+	var sdata_prev = ""; // Previous sound data from the server (string)
+	var fdata      = []; // Sound data from the server (float array)
 	var buff       = ""; // Transmission buffer for string to float parsing
 	var i, j       = 0;  // Loop counters
-	var data_update_delay = 500;              // Data update delay ( milliseconds )
+	var data_update_delay = 500;              // Data update delay (milliseconds)
 	var server_json_file  = "last_line.json"; // Name of the file with
 						  // the newest sound data on
 						  // the server side
@@ -36,14 +35,14 @@ $( () =>
 	*/
 	function makeChart () 
 	{
-		soundGraph = new Chart( ctx,
+		soundGraph = new Chart(ctx,
 		{
 			// Type of the drawn chart
 			type : "line",
 		    data :
 		    {
 				// Labels of each point on the graph
-		        labels : [ "1", "2", "3", "4", "5", "6", "7", "8" ],
+		        labels : ["1", "2", "3", "4", "5", "6", "7", "8"],
 		        datasets :
 		        [{
 		            label : "FastDB",
@@ -92,7 +91,7 @@ $( () =>
 		    		{
 		    			pointStyle : "circle",
 		    			backgroundColor : "pink",
-						borderColor : "rgba( 0, 0, 0, 1 )",
+						borderColor : "rgba(0, 0, 0, 1)",
 						hoverRadius : 25,
 		    			hoverBorderWidth : 5,
 		    			radius : 10,
@@ -101,8 +100,8 @@ $( () =>
 		    		// Line parameters
 		            line :
 		            {
-		            	backgroundColor : "rgba( 0, 0, 0, 0.5 )",
-						borderColor : "rgba( 0, 0, 0, 1 )",
+		            	backgroundColor : "rgba(0, 0, 0, 0.5)",
+						borderColor : "rgba(0, 0, 0, 1)",
 						borderWidth : 2,
 		                tension : 0,
 		            }
@@ -122,11 +121,11 @@ $( () =>
 	{
 		$.get(
 			server_json_file,
-			( data ) =>
+			(data) =>
 			{
 		        // Transferring the data string
 				// into string variable sdata
-				sdata = data[ "data" ];
+				sdata = data["data"];
 			}
 		);
 	}
@@ -141,19 +140,19 @@ $( () =>
 	function convertData ()
 	{
 		// String to float array convertion
-		for ( i = 0, j = 0; i < sdata.length; ++i )
+		for (i = 0, j = 0; i < sdata.length; ++i)
 		{
 			// Gets the sting of a number
 			// until there is a semicolon
-			if ( sdata[ i ] != ";" )
+			if (sdata[i] != ";")
 			{	
 				// The string is passed into the buffer
-				buff += sdata[ i ];
+				buff += sdata[i];
 			}	
 			else
 			{
 				// String to float array parsing of the buffer
-				fdata[ j ] = parseFloat( buff );
+				fdata[j] = parseFloat(buff);
 
 				// Cleaning the string buffer and going
 				// to the the next float array element
@@ -212,7 +211,7 @@ $( () =>
 
 				// Disabling data convertion and graph updating
 				// if there is no new data received
-				if ( sdata_prev !== sdata )
+				if (sdata_prev !== sdata)
 				{
 					// Saving currently received data into string
 					// buffer sdata_prev
@@ -228,7 +227,7 @@ $( () =>
 
 
 	// Resizing the canvas to fill browser window dynamically
-	window.addEventListener( "resize", resize, false );
+	window.addEventListener("resize", resize, false);
 	
 	main();
 });
