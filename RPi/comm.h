@@ -10,4 +10,4 @@
 #define URL "http://your.server.com/sound.php"
 
 // Function prototypes
-void sendToServer ( double rms[] );
+void sendToServer (double rms[]);
