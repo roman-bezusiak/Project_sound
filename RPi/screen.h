@@ -5,7 +5,7 @@
 */
 
 #define UNICODE      // Conditional compiling
-#define BAR "\u2590" // Bar symbol ( UTF-8 )
+#define BAR "\u2590" // Bar symbol (UTF-8)
 
 // Constant definitions
 #define ESC 0x1B
@@ -25,6 +25,6 @@ enum COLORS
 
 // Function prototypes
 void clearScreen ();
-void goToXY      ( int row, int col );
-void setColour   ( int id );
-void dispBar     ( int col, double dB );
+void goToXY      (int row, int col);
+void setColour   (int id);
+void dispBar     (int col, double dB);
