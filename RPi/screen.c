@@ -12,8 +12,8 @@
 */
 void clearScreen ()
 {
-	printf( "%c[2J", ESC );
-	fflush( stdout );
+	printf("%c[2J", ESC);
+	fflush(stdout);
 }
 
 /*
@@ -24,10 +24,10 @@ void clearScreen ()
 	Arguments: console row, console column
 	Returns: none
 */
-void goToXY ( int row, int col )
+void goToXY (int row, int col)
 {
-	printf( "%c[%d;%dH", ESC, row, col );
-	fflush( stdout );
+	printf("%c[%d;%dH", ESC, row, col);
+	fflush(stdout);
 }
 
 /*
@@ -38,12 +38,12 @@ void goToXY ( int row, int col )
 	Arguments: colour id
 	Returns: none
 */
-void setColour ( int id )
+void setColour (int id)
 {
-	if ( id >= BLACK && id <= WHITE )
+	if (id >= BLACK && id <= WHITE)
 	{
-		printf( "%c[%d;1m", ESC, id );
-		fflush( stdout );
+		printf("%c[%d;1m", ESC, id);
+		fflush(stdout);
 	}
 }
 
@@ -64,40 +64,40 @@ void setColour ( int id )
 	Arguments: current column, current decibel value
 	Returns: none
 */
-void dispBar ( int col, double dB )
+void dispBar (int col, double dB)
 {
 	int
 		i,
-		decibels = ( int ) floor( dB / 3 ); // Loop counter
+		decibels = (int) floor(dB / 3); // Loop counter
 	
 	
-	for ( i = 0; i < decibels; ++i )
+	for (i = 0; i < decibels; ++i)
 	{
 		// Changing cursor position
-		goToXY( 30 - i, col + 1 );	
+		goToXY(30 - i, col + 1);	
 		
 		// Setting colour of the drawing symbol
-		if ( i <= 50 / 3 )
+		if (i <= 50 / 3)
 		{
-			setColour( WHITE );
+			setColour(WHITE);
 		}
-		else if ( i <= 70 / 3  )
+		else if (i <= 70 / 3 )
 		{
-			setColour( YELLOW );
+			setColour(YELLOW);
 		}
 		else
 		{
-			setColour( RED );
+			setColour(RED);
 		}
 		
 		// Variation of the output
 #ifndef UNICODE
-		printf( "%c", '*' ); // Setting asterisk as a drawing symbol
+		printf("%c", '*'); // Setting asterisk as a drawing symbol
 #else
-		printf( "%s", BAR ); // Setting a vertical half-bar as a drawing symbol
+		printf("%s", BAR); // Setting a vertical half-bar as a drawing symbol
 #endif
 
 		// Refreshing the colour
-		setColour( 0 );
+		setColour(0);
 	}
 }
