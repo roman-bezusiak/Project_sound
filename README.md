@@ -227,15 +227,15 @@ Run:
 	one of the following):
 		- Displayed using bar (▐) symbol (
 			[**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode))
-		- Displayed using asterisk (*) symbol (
+		- Displayed using asterisk ( * ) symbol (
 			[**non-UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode))
 
 ```
 
 	┌───────────────┐                        ┌────────────────┐     ┌─────────────────┐
-	│ MOC           │  → (commands)     →  │ RPi            │  ↔  │ Sound card      │
-	│     (PuTTY) │  ← (sound          ←  │    (sound.a) │     └─────────────────┘
-	└───────────────┘      info / graph)    └────────────────┘        ↕         ↕
+	│ MOC           │  →  (commands)      →  │ RPi            │  ↔  │ Sound card      │
+	│     (PuTTY)   │  ←  (sound          ←  │      (sound.a) │     └─────────────────┘
+	└───────────────┘      info / graph)     └────────────────┘        ↕         ↕
 	                                                                ┌─────┐ ┌─────────┐
 	                                                                │ mic │ │ dynamic │
 	                                                                └─────┘ └─────────┘
@@ -258,13 +258,13 @@ Run:
 	............................................................................
 
 	┌─────────────────┐                      ┌──────────────────────┐
-	│ RPi             │  → (sound data) →  │ Server               │
-	│     (sound.a) │                      │        (sound.php) │
-	└─────────────────┘                      │    (soundGraph.js) │
-	                                         │       (sound.html) │
+	│ RPi             │  →  (sound data)  →  │ Server               │
+	│       (sound.a) │                      │          (sound.php) │
+	└─────────────────┘                      │      (soundGraph.js) │
+	                                         │         (sound.html) │
 	┌─────────────────┐                      └──────────────────────┘
-	│ MOC             │  ←   (sound graph)   ↲
-	│     (browser) │
+	│ MOC             │   ←   (sound graph)    ↲
+	│       (browser) │
 	└─────────────────┘               
 
 ```
