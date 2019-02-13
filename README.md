@@ -5,27 +5,27 @@
 ### Required equipment:
 	
 1. [Raspberry Pi](https://en.wikipedia.org/wiki/Raspberry_Pi), 
-	Model 3B ( further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+	Model 3B (further: [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
 
 2. [External USB sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) 
-	( further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards) )
+	(further: [sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards))
 
-3. Microphone, 3.5 mm headphone jack plug ( further: mic )
+3. Microphone, 3.5 mm headphone jack plug (further: mic)
 
 4. ["RJ45" Ethernet cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) 
-	( further: [e-cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C) )
+	(further: [e-cable](https://en.wikipedia.org/wiki/Modular_connector#8P8C))
 
 5. Power supply for the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) 
-	( one of the following ):
-	- USB cable + seperate device's USB port ( PC, laptop, etc. )
+	(one of the following):
+	- USB cable + seperate device's USB port (PC, laptop, etc.)
 	- [Common external power supply](https://en.wikipedia.org/wiki/Common_external_power_supply)
 
 6. Server
-7. Main operating computer ( PC, laptop, etc.; further: MOC )
+7. Main operating computer (PC, laptop, etc.; further: MOC)
 
-#### Optional ( for testing sound recording quality ):
+#### Optional (for testing sound recording quality):
 
-Sound playing device, 3.5 mm headphone jack plug ( further: dynamic )
+Sound playing device, 3.5 mm headphone jack plug (further: dynamic)
 
 ### Required equipment set-up:
 
@@ -39,7 +39,7 @@ Sound playing device, 3.5 mm headphone jack plug ( further: dynamic )
 
 4. Connect the [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) to the power supply
 
-#### Optional ( for testing sound recording quality ):
+#### Optional (for testing sound recording quality):
 
 Connect the dynamic to the 
 	[sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
@@ -48,16 +48,16 @@ Connect the dynamic to the
 
 ### Required software:
 	
-1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files ( 
-	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files (
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
 
-2. Server files ( Server )
+2. Server files (Server)
 
-3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) ( 
-	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware) )
+3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) (
+	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware))
 
-4. [Curl library](https://curl.haxx.se/) ( 
-	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) )
+4. [Curl library](https://curl.haxx.se/) (
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
 
 ### Required software settings:
 
@@ -192,7 +192,7 @@ Run:
 ~$ sudo apt-get install alsa-utils=1.0.25-4
 ```
 
-Reboot ( if necessary ).
+Reboot (if necessary).
 
 Optional test of the sound quality:  
 Run:
@@ -218,36 +218,36 @@ Run:
 1. Recording **1 second** of audio into _test.wav_ file using 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi)
 
-2. Outputting corresponding data in the console window ( one of the following ):
+2. Outputting corresponding data in the console window (one of the following):
 	- Header data and list of **80 [RMS](https://en.wikipedia.org/wiki/Root_mean_square)** 
-		values ( 
-		[**DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) )
-	- Sound decibel level bar chart ( 
+		values (
+		[**DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode))
+	- Sound decibel level bar chart (
 	[**non-DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode); 
-	one of the following ):
-		- Displayed using bar ( ▐ ) symbol ( 
-			[**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) )
-		- Displayed using asterisk ( * ) symbol ( 
-			[**non-UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) )
+	one of the following):
+		- Displayed using bar (▐) symbol (
+			[**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode))
+		- Displayed using asterisk (*) symbol (
+			[**non-UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode))
 
 ```
 
 	┌───────────────┐                        ┌────────────────┐     ┌─────────────────┐
-	│ MOC           │  → ( commands )     →  │ RPi            │  ↔  │ Sound card      │
-	│     ( PuTTY ) │  ← ( sound          ←  │    ( sound.a ) │     └─────────────────┘
-	└───────────────┘      info / graph )    └────────────────┘        ↕         ↕
+	│ MOC           │  → (commands)     →  │ RPi            │  ↔  │ Sound card      │
+	│     (PuTTY) │  ← (sound          ←  │    (sound.a) │     └─────────────────┘
+	└───────────────┘      info / graph)    └────────────────┘        ↕         ↕
 	                                                                ┌─────┐ ┌─────────┐
 	                                                                │ mic │ │ dynamic │
 	                                                                └─────┘ └─────────┘
 
 ```
 				
-#### II. Optional part ( [**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) ):
+#### II. Optional part ([**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode)):
 
-1. Sending FastDB ( 8 decibel values recorded once in every 125 ms ) 
+1. Sending FastDB (8 decibel values recorded once in every 125 ms) 
 	data to the server
 
-2. Storing the data on the server side ( both of the following ):		
+2. Storing the data on the server side (both of the following):		
 	- All the data with attached dates in _sound_log.txt_ file
 	- Last received **8 pieces** of sound data in _last_line.json_ file	
 
@@ -258,13 +258,13 @@ Run:
 	............................................................................
 
 	┌─────────────────┐                      ┌──────────────────────┐
-	│ RPi             │  → ( sound data ) →  │ Server               │
-	│     ( sound.a ) │                      │        ( sound.php ) │
-	└─────────────────┘                      │    ( soundGraph.js ) │
-	                                         │       ( sound.html ) │
+	│ RPi             │  → (sound data) →  │ Server               │
+	│     (sound.a) │                      │        (sound.php) │
+	└─────────────────┘                      │    (soundGraph.js) │
+	                                         │       (sound.html) │
 	┌─────────────────┐                      └──────────────────────┘
-	│ MOC             │  ←   ( sound graph )   ↲
-	│     ( browser ) │
+	│ MOC             │  ←   (sound graph)   ↲
+	│     (browser) │
 	└─────────────────┘               
 
 ```
@@ -276,21 +276,21 @@ Run:
 There are some preset values ruling conditional compiling in the 
 	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files:
 
-1. [**_DEBUG_ mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) - off ( 
+1. [**_DEBUG_ mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) - off (
 	[**non-DEBUG mode**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) or 
-	[**DEBUG**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) undefined )
+	[**DEBUG**](https://github.com/roman-bezusiak/Sound-proj.#debug--non-debug-mode) undefined)
 2. [**_UNICODE_ mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) - on 
-	( [**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) 
-	or [**UNICODE**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) defined )
+	([**UNICODE mode**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) 
+	or [**UNICODE**](https://github.com/roman-bezusiak/Sound-proj.#unicode--non-unicode-mode) defined)
 3. [**_COMM_ mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) - on 
-	( [**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
+	([**COMM mode**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
 	or [**COMM**](https://github.com/roman-bezusiak/Sound-proj.#comm--non-comm-mode) 
-	defined )
+	defined)
 
 #### DEBUG / non-DEBUG mode
 
 The **_DEBUG_** constant is defined in _sound.h_. In order to set it off / on, add / 
-remove two slashes ( // ) respectively in the beginning of the following line:
+remove two slashes (//) respectively in the beginning of the following line:
 
 ```
 #define DEBUG // Conditional compiling
@@ -299,7 +299,7 @@ remove two slashes ( // ) respectively in the beginning of the following line:
 #### UNICODE / non-UNICODE mode
 
 The **_UNICODE_** constant is defined in _screen.h_. In order to set it off / on, add 
-/ remove two slashes ( // ) respectively in the beginning of the following line:
+/ remove two slashes (//) respectively in the beginning of the following line:
 
 ```
 #define UNICODE // Conditional compiling
@@ -308,7 +308,7 @@ The **_UNICODE_** constant is defined in _screen.h_. In order to set it off / on
 #### COMM / non-COMM mode
 
 The **_COMM_** constant is defined in _comm.h_. In order to set it off / on, add / 
-remove two slashes ( // ) respectively in the beginning of the following line:
+remove two slashes (//) respectively in the beginning of the following line:
 
 ```
 #define DEBUG // Conditional compiling
@@ -353,37 +353,37 @@ In order to stop the program, press Ctrl + C in the
 
 ### List:
 
-- [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) ( **_8_** ):
-	- **_.c_ files** ( **_4_** ):
+- [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) (**_8_**):
+	- **_.c_ files** (**_4_**):
 		- comm.c
 		- main.c
 		- screen.c
 		- sound.c	
-	- **_.h_ files** ( **_3_** ):
+	- **_.h_ files** (**_3_**):
 		- comm.h
 		- screen.h
 		- sound.h
-	- **_Other_ files** ( **_1_** ):
+	- **_Other_ files** (**_1_**):
 		- makefile
 
-- Server ( **_5_** ( **_7_** including optional ones ) ):
-	- **_Front-end_ files** ( **_2_** ):
+- Server (**_5_** (**_7_** including optional ones)):
+	- **_Front-end_ files** (**_2_**):
 		- sound.html
 		- soundGraph.js
-	- **_Back-end_ files** ( **_3_** ):
+	- **_Back-end_ files** (**_3_**):
 		- last_line.json
 		- sound.php
 		- sound_log.php
-	- **_Optional_ files** ( **_2_** ):
+	- **_Optional_ files** (**_2_**):
 		- sound_log.txt
 		- last_line.json
 
-- Other ( **_3_** ):
+- Other (**_3_**):
 	- README.md
 	- LICENCE
 	- web_site_graph_example.png
 
-#### Total: **_16_** files ( **_18_** including optional ones )
+#### Total: **_16_** files (**_18_** including optional ones)
 
 #### Remark
 
@@ -437,22 +437,22 @@ set
 		
 #### [_PuTTY_](https://en.wikipedia.org/wiki/PuTTY) solution:
 
-1. Go to the **_console settings_** ( choose either way )
+1. Go to the **_console settings_** (choose either way)
 	- **_PuTTY - Configuration_** window can be reached when [PuTTY](https://en.wikipedia.org/wiki/PuTTY) 
 		is launched
 	- **_PuTTY - Reconfiguration_** window can be reached by right-clicking on the top bar
 		of the [PuTTY](https://en.wikipedia.org/wiki/PuTTY) window
 
-2. **_Window_**               ( window's left side tree )
-3. **_Translation_**          ( window's left side tree )
-4. **_Remote character set_** ( window's right side )
-5. Choose **_UTF-8_**         ( drop-down list )
+2. **_Window_**               (window's left side tree)
+3. **_Translation_**          (window's left side tree)
+4. **_Remote character set_** (window's right side)
+5. Choose **_UTF-8_**         (drop-down list)
 
 ## Credits and acknowledgments
 
 ### Authors:
 - **Roman Bezusiak** - _Initial work_ - 
-	[Roman Bezusiak ( GitHub profile )](https://github.com/roman-bezusiak)
+	[Roman Bezusiak (GitHub profile)](https://github.com/roman-bezusiak)
 
 ### Used resources:
 - **[Wikimedia Foundation Inc.](https://wikimediafoundation.org/wiki/Home), 
