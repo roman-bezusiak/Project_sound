@@ -1,6 +1,21 @@
 # Sound project
 
-## Configuration instructions
+## 📥 Installation instructions
+
+### Required software:
+	
+1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files (
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
+
+2. Server files (Server)
+
+3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) (
+	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware))
+
+4. [Curl library](https://curl.haxx.se/) (
+	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
+
+## 🛠 Configuration instructions
 
 ### Required equipment:
 	
@@ -43,22 +58,7 @@ Sound playing device, 3.5 mm headphone jack plug (further: dynamic)
 
 Connect the dynamic to the 
 	[sound card](https://en.wikipedia.org/wiki/Sound_card#USB_sound_cards)
-
-## Installation instructions
-
-### Required software:
 	
-1. [RPi](https://en.wikipedia.org/wiki/Raspberry_Pi) files (
-	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
-
-2. Server files (Server)
-
-3. [PuTTY](https://en.wikipedia.org/wiki/PuTTY) (
-	[MOC](https://github.com/roman-bezusiak/Sound-proj.#required-hardware))
-
-4. [Curl library](https://curl.haxx.se/) (
-	[RPi](https://en.wikipedia.org/wiki/Raspberry_Pi))
-
 ### Required software settings:
 
 1. Check whether [**Curl library**](https://curl.haxx.se/) is already installed on 
@@ -209,7 +209,7 @@ Run:
 ~$ aplay test.wav
 ```
 
-## Operating instructions
+## ️️️️️⚙️ Operating instructions
 
 ### Main algorithm
 
@@ -349,7 +349,7 @@ _comm.h_ file in the following line:
 In order to stop the program, press Ctrl + C in the 
 [PuTTY](https://en.wikipedia.org/wiki/PuTTY) console window.
 
-## File manifest
+## 🗃 File manifest
 
 ### List:
 
@@ -399,13 +399,13 @@ only if there is _last_line.json_ file with valid data.
 {"data":"124.00;219.49;317.29;412.53;389.72;256.49;134.82;192.13;"}
 ```
 
-## Copyright and licensing information
+## ⚖️ Copyright and licensing information
 
 This project is licensed under the 
 [**GNU General Public License**](https://en.wikipedia.org/wiki/GNU_General_Public_License). 
 See the [_LICENSE_](LICENSE) file for details
 
-## Known bugs, problems and troubleshooting
+## ⚠️ Known bugs, problems and troubleshooting
 
 ### "_The graph is not updating on the site_"
 	
@@ -448,7 +448,7 @@ set
 4. **_Remote character set_** (window's right side)
 5. Choose **_UTF-8_**         (drop-down list)
 
-## Credits and acknowledgments
+## 👏 Credits and acknowledgments
 
 ### Authors:
 - **Roman Bezusiak** - _Initial work_ - 
