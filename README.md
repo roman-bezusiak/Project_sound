@@ -211,7 +211,7 @@ Run:
 
 ## ️️️️️⚙️ Operating instructions
 
-### Main algorithm
+### Algorithm
 
 #### I. Mandatory part:
 
