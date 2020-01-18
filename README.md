@@ -395,7 +395,7 @@ only if there is _last_line.json_ file with valid data.
 
 ##### Valid _last_line.json_ data example:
 
-```
+```json
 {"data":"124.00;219.49;317.29;412.53;389.72;256.49;134.82;192.13;"}
 ```
 
